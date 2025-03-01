@@ -92,3 +92,4 @@
 # Don't track build artifacts and products
 *.o
 jupiter
+!**/jupiter/
