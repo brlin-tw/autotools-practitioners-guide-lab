@@ -21,7 +21,7 @@ distcheck: $(distdir).tar.gz
 		ready for distribution."
 
 $(distdir).tar.gz: FORCE $(distdir)
-	tar chof - $(distdir) |\
+	tar cf - --owner=0 --group=0 $(distdir) |\
 		gzip -9 -c >$(distdir).tar.gz
 	rm -rf $(distdir)
 
